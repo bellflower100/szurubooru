@@ -27,7 +27,6 @@ services:
       THREADS:
     volumes:
       - "${MOUNT_DATA}:/data"
-      volumes:
       - "${MOUNT_SQL}/config.yaml:/opt/app/config.yaml"
 
   client:
