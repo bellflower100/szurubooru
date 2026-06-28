@@ -27,7 +27,8 @@ services:
       THREADS:
     volumes:
       - "${MOUNT_DATA}:/data"
-      - "./server/config.yaml:/opt/app/config.yaml"
+      volumes:
+      - "${MOUNT_SQL}/config.yaml:/opt/app/config.yaml"
 
   client:
     image: szurubooru/client:latest
